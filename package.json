@@ -7,8 +7,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Licenta", "2k18"],
+  "author": "Andrei Olteanu",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "4.0.0",
