@@ -7,7 +7,10 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
-  "keywords": ["Licenta", "2k18"],
+  "keywords": [
+    "Licenta",
+    "2k18"
+  ],
   "author": "Andrei Olteanu",
   "license": "MIT",
   "dependencies": {

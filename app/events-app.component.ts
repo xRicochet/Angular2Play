@@ -1,9 +1,9 @@
-import {Component} from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
     selector: 'events-app',
-    // template: '<h2>Hello World</h2>'
-    templateUrl:'app/templateRefs/events-app.component.html'
+    template: "<events-list></events-list>"
+    // templateUrl: "app/events-app.component.html"
 })
-export class EventsAppComponent{
+export class EventsAppComponent {
 }
