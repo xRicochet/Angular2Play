@@ -2,8 +2,10 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'events-app',
-    template: "<events-list></events-list>"
-    // templateUrl: "app/events-app.component.html"
+    template: `
+    <nav-bar></nav-bar>
+    <events-list></events-list>
+    `
 })
 export class EventsAppComponent {
 }
