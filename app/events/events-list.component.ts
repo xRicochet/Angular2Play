@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { ToastrService } from "../common/toastr.service";
 import { EventService } from "./shared/event.service";
 import { ActivatedRoute } from "@angular/router";
+import { IEvent } from "./index";
 
 @Component({
     template: `
@@ -17,7 +18,7 @@ import { ActivatedRoute } from "@angular/router";
     `
 })
 export class EventsListComponent {
-    events: any
+    events: IEvent[]
     constructor(private eventService: EventService, private toastrService: ToastrService, private route:ActivatedRoute) {
     }
  
