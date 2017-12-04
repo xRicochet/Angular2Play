@@ -14,7 +14,8 @@ import {
     EventDetailsComponent,
     CreateEventComponent,
     EventListResolver,
-    EventRouteActivator
+    EventRouteActivator,
+    CreateSessionComponent
 } from './events/index'
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -34,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         NavBarComponent,
         CreateEventComponent,
         Error404Component,
+        CreateSessionComponent
     ],
     providers: [
         EventRouteActivator,
@@ -52,5 +54,5 @@ export class AppModule {
 function checkDirtyState(component: CreateEventComponent) {
     if (component.isDirty)
         return window.confirm("Unsaved work. U rlly wanna leave?")
-    return false
+    return true
 }
