@@ -4,8 +4,8 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
     selector: 'event-thumbnail',
     template: `
     <div [routerLink]="['/events', event.id]" class="well hoverwell thumbnail">
-        <h2>{{event.name}}</h2>
-        <div>Data: {{event?.date}}</div>
+        <h2>{{event.name | uppercase}}</h2>
+        <div>Data: {{event?.date | date}}</div>
         <div>Time: {{event?.time}}</div>
         <div>Price: \${{event?.price}}</div>
         <div [hidden]="!event?.location">
