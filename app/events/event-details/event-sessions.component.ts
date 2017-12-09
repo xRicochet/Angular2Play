@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnChanges } from "@angular/core";
 import { ISession } from "../index";
 
 
@@ -6,6 +6,23 @@ import { ISession } from "../index";
     selector: 'session-list',
     templateUrl: 'app/events/event-details/event-sessions.component.html',
 })
-export class EventSessionsListComponent {
-    @Input() sessions: ISession[]
+export class EventSessionsListComponent implements OnChanges {
+    @Input() sessions: ISession[];
+    @Input() visibleSessions: ISession[];
+    @Input() filterBy: String;
+
+    ngOnChanges() {
+        if (this.sessions) {
+            this.filterSessions(this.filterBy);
+        }
+    }
+
+    filterSessions(filter: String) {
+        if (filter === 'all') {
+            this.visibleSessions = this.sessions.slice(0);
+        } else {
+            this.visibleSessions = this.sessions.filter(s => s.level.toLocaleLowerCase() === filter);
+        }
+    }
+
 }

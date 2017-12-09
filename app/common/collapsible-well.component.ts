@@ -13,7 +13,7 @@ import { Component, Input } from "@angular/core";
     `
 })
 export class CollapsibleWell {
-    @Input() title: String
+    @Input() title: String;
     visible: boolean = true;
     toggleContent() {
         this.visible = !this.visible

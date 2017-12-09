@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { validateConfig } from "@angular/router/src/config";
 
 @Pipe({
     name: 'duration'
